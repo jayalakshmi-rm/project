@@ -5,11 +5,9 @@ import { Injectable,EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedeventService {
-  
-
-
-  constructor() { }
+   constructor() { }
   userData=new EventEmitter<any>();
   
 }
+
 

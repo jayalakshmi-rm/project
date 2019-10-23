@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, Route } from '@angular/router';
 import { Observable } from 'rxjs';
+import { LoginComponent } from 'src/app/components/login/login.component';
 
 @Injectable()
 export class  RouteServiceService  implements CanActivate {
@@ -11,8 +12,7 @@ export class  RouteServiceService  implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     
-
-    return true;
+   return true;
    
   }
 

@@ -1,12 +1,35 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { SharedeventService } from './services/shared/sharedevent.service';
+import { User } from './model/user';
+import { Observable } from 'rxjs';
+import { AuthService } from './services/authService';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'project1';
-}
+export class AppComponent implements OnInit {
+username:string;
+ handleLink:boolean=false;
+  constructor(private authService: AuthService,private  sharedEvent:SharedeventService) {
+    this.sharedEvent.userData.subscribe(
+      (data) => {
+        this.handleLink = data;
+      }
+    );
+  }  
+                    
+  isLoggedIn$: Observable<boolean>;
+   
+    ngOnInit() {
+      this.isLoggedIn$ = this.authService.isLoggedIn;
+    }
+  
+    logout(){
+      this.authService.logout();                     
+    }
+  }
+
 
 
