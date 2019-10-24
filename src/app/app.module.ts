@@ -11,6 +11,8 @@ import { RouteServiceService} from './services/routes/route-service.service';
 import {UserServiceService} from './services/user/user-service.service';
 import { SharedeventService } from './services/shared/sharedevent.service';
 import { AuthService } from './services/authService';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { AuthService } from './services/authService';
     DashboardComponent,
     SignupComponent,
     LoginComponent,
+    ProductDetailsComponent,
+    AddProductComponent,
    
   ],
   imports: [
