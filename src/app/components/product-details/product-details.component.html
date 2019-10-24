@@ -1,0 +1,35 @@
+
+<div class="content-container">
+    <div class="row">
+        <div class="col-xs-12">
+            {{productDetails.productHeading}}
+        </div>
+    </div>
+    <div class="row space-around">
+        <div class="col-xs-12 col-sm-6 text-center right-border">
+            <img [src]="productDetails.productImagePath" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="row bottom-space">
+                <div class="col-sm-2">
+                    Description
+                </div>
+                <div class="col-sm-10">
+                    {{productDetails.productDescription}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    Sizes available
+                </div>
+                <div class="col-sm-10 flex-container">
+                    <div *ngFor="let productSize of productSizes" class="flex-item border">
+                        <div [ngClass]="{'in-active': productDetails.productSizes.includes(productSize)}">
+                            {{productSize}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

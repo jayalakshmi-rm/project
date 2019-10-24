@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+.content-container {
+    margin: 1em;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.space-around {
+    margin: 20px;
+}
+
+.flex-item {
+    background: white;
+    width: 30px;
+    height: 32px;
+    margin: 5px;
+    line-height: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    .in-active {
+        background: dimgray;
+        color: white;
+        opacity: 0.5;
+        cursor: default;
+    }
+  }
+
+.bottom-space {
+    margin-bottom: 15px;
+}
+
+.border {
+    border: 0.5px solid rgba(0,0,0, 0.5);
+}
+
+.right-border {
+    border-right: 0.5px solid rgba(0,0,0, 0.5);
+}
+
+.left-border {
+    border-left: 0.5px solid rgba(0,0,0, 0.5);
+}
+
+.bottom-border {
+    border-bottom: 0.5px solid rgba(0,0,0, 0.5);
+}
+
