@@ -1,5 +1,5 @@
 
-<div class="content-container">
+<div class="content-container" *ngIf="productDetails">
     <div class="row">
         <div class="col-xs-12">
             {{productDetails.productHeading}}
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-sm-10 flex-container">
                     <div *ngFor="let productSize of productSizes" class="flex-item border">
-                        <div [ngClass]="{'in-active': productDetails.productSizes.includes(productSize)}">
+                        <div [ngClass]="{'in-active': productDetails.productSizes.indexOf(productSize) === -1}">
                             {{productSize}}
                         </div>
                     </div>
@@ -32,4 +32,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="content-container text-center error-msg" *ngIf="!productDetails">
+    {{noDetailsToDisplay}}
 </div>

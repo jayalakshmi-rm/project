@@ -13,6 +13,7 @@ import { SharedeventService } from './services/shared/sharedevent.service';
 import { AuthService } from './services/authService';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,13 +25,15 @@ import { AddProductComponent } from './components/add-product/add-product.compon
     LoginComponent,
     ProductDetailsComponent,
     AddProductComponent,
-   
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [UserServiceService,RouteServiceService, SharedeventService ,AuthService],
+  providers: [UserServiceService, RouteServiceService, SharedeventService , AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
