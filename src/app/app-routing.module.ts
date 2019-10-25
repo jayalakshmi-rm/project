@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},
 {path:'signup',component:SignupComponent},
 {path:'login',component:LoginComponent},
-{path:'productdetails',component:ProductDetailsComponent},
+{path:'productdetails/:productID',component:ProductDetailsComponent},
 {path:'addproductdetails',component:AddProductComponent},
 { path: '', redirectTo: 'home', pathMatch: 'full' }];
 
