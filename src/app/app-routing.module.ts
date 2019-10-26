@@ -8,12 +8,14 @@ import { RouteServiceService} from './services/routes/route-service.service';
 import { AuthGuard } from './services/authGuard';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { ProductlistComponent } from './components/productlist/productlist.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},
 {path:'signup',component:SignupComponent},
 {path:'login',component:LoginComponent},
+{path:'',component:ProductlistComponent},
 {path:'productdetails/:productID',component:ProductDetailsComponent},
 {path:'addproductdetails',component:AddProductComponent},
 { path: '', redirectTo: 'home', pathMatch: 'full' }];

@@ -14,6 +14,7 @@ import { AuthService } from './services/authService';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductlistComponent } from './components/productlist/productlist.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ProductDetailsComponent,
     AddProductComponent,
+    ProductlistComponent,
 
   ],
   imports: [

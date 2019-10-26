@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=app.component.css.map */
+header {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: #2b2222;
+  color: white;
+  text-align: center;
+}
+
+.main {
+  top: 0;
+  width: 100%;
+}
+
+.form-control {
+  width: 600px;
+}
+/*# sourceMappingURL=app.component.css.map */

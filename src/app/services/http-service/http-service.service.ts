@@ -11,4 +11,5 @@ export class HttpServiceService {
   getService(url) {
     return this.http.get('http://localhost:3000/' + url);
   }
+  
 }

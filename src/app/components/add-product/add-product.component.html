@@ -1,9 +1,14 @@
 <div class="content-container">
     <div class="flex-container flex-column">
-        <input type="text" [(ngModel)]="product.productID" placeholder="Product ID" required/>
-        <input type="text" [(ngModel)]="product.productName" placeholder="Product Name" required/>
-        <input type="text" [(ngModel)]="product.productDescription" placeholder="Product Description" required/>
-        <input type="text" [(ngModel)]="product.productImagePath" placeholder="Product image path" required/>
-        <input type="text" [(ngModel)]="product.availableQuality" placeholder="Product Quality" required/>
+        <input type="text" [(ngModel)]="product.productID" placeholder="Product ID" required/><br>
+        <input type="text" [(ngModel)]="product.productName" placeholder="Product Name" required/><br>
+        <input type="text" [(ngModel)]="product.productDescription" placeholder="Product Description" required/><br>
+        <input type="text" [(ngModel)]="product.productImagePath" placeholder="Product image path" required/><br>
+        <input type="text" [(ngModel)]="product.availableQuality" placeholder="Product Quality" /><br>
+        <input type="text" [(ngModel)]="product.productPrice" placeholder="Product Price" required/><br>
+        <input type="text" [(ngModel)]="product.productStatus" placeholder="Product Status" required/><br>
+        <input type="text" [(ngModel)]="product.productSizes" placeholder="Product Sizes" required/><br>
+        <input type="text" [(ngModel)]="product.productCategory" placeholder="Product Category" /><br>
+        <input type="button" (click)="addProduct()" value="Add">
     </div>
 </div>

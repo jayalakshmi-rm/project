@@ -29,25 +29,53 @@
 
 
 
-<div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/home" routerLinkActive="true">Home</a>
-      </li>
+<div class="row">
+  <header class="col-md-12 navbar navbar-docs navbar-expand navbar-dark bg-primary box-shadow-sm px-3 px-lg-4" data-scroll-header><a class="navbar-brand mr-auto" href="/" style="min-width: 7rem;"><img width="142" src="assets/shoppers-logo.jpeg" alt="shoppers"/></a>
+    <div class="input-group-overlay d-lg-flex mx-4"> 
+        <input class="form-control" type="text" placeholder="Search for products">
+        <span class="input-group-addon">
+            <i class="fa fa-search"></i>
+        </span>
+    </div>
+    
+    <ul class="navbar-nav ml-auto d-lg-flex"> 
+      <li class="nav-item"><a class="nav-link" routerLink="/login"><i class="czi-eye align-middle mt-n1 mr-2"></i>Login</a></li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/dashboard" routerLinkActive="true">Dashboard</a>
+        <div class="nav-link disabled text-border px-1">|</div>
       </li>
+      <li class="nav-item"><a class="nav-link" routerLink="/signup"><i class="czi-book align-middle mt-n1 mr-2"></i>signup</a></li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/signup" routerLinkActive="true">Signup</a>
+        <div class="nav-link disabled text-border px-1">|</div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="true">Login</a>
-      </li>
+      <li class="nav-item"><a class="nav-link" routerLink="/productlist"><i class="czi-book align-middle mt-n1 mr-2"></i></a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/addproductdetails"><i class="czi-book align-middle mt-n1 mr-2"></i></a></li>
     </ul>
-  </div>
-</nav>
-
-<router-outlet></router-outlet>
+    <button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#components-nav"><span class="navbar-toggler-icon"></span></button><a class="btn btn-primary btn-shadow ml-2 ml-lg-4" href="#">Buy now</a>
+  </header>
+   <div class="main col-md-12">
+      <router-outlet></router-outlet>
+   </div>  
+    
+      <footer class="col-md-12" >
+      <div class="footer-copyright text-center py-3">© 2019 Copyright
+      </div>
+      <div class="row">
+  
+          <!-- Grid column -->
+          <div class="col-md-12 py-5">
+            <div class="mb-5 flex-center">
+                <a class="fb-ic">
+                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!-- Twitter -->
+                  <a class="tw-ic">
+                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+            </div>
+          </div>
+          </div>
+      </footer>
+    
+    
+  
 </div>
