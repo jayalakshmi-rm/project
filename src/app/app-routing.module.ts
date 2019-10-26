@@ -15,10 +15,10 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},
 {path:'signup',component:SignupComponent},
 {path:'login',component:LoginComponent},
-{path:'',component:ProductlistComponent},
+{path:'productlist',component:ProductlistComponent},
 {path:'productdetails/:productID',component:ProductDetailsComponent},
 {path:'addproductdetails',component:AddProductComponent},
-{ path: '', redirectTo: 'home', pathMatch: 'full' }];
+{ path: '', redirectTo: 'productlist', pathMatch: 'full' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

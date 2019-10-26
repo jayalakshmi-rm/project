@@ -10,7 +10,7 @@ import { HttpServiceService } from '../../services/http-service/http-service.ser
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-
+  productName;
   imagePath;
   productDetails;
   productSizes = ConstantData.productSizes;
