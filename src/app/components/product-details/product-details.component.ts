@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDetailsModel } from '../../model/product-details.model';
 import { ConstantData } from '../../utils/constants';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpServiceService } from '../../services/http-service/http-service.service';
+
 
 @Component({
   selector: 'app-product-details',
@@ -10,7 +11,7 @@ import { HttpServiceService } from '../../services/http-service/http-service.ser
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-
+  productName;
   imagePath;
   productDetails;
   productSizes = ConstantData.productSizes;
@@ -18,7 +19,7 @@ export class ProductDetailsComponent implements OnInit {
   productID;
   noDetailsToDisplay;
 
-constructor(private activatedRoute: ActivatedRoute, private httpService: HttpServiceService) { }
+constructor(private _router:Router,private activatedRoute: ActivatedRoute, private httpService: HttpServiceService) { }
 
   ngOnInit() {   
     this.productID = this.activatedRoute.snapshot.params['productID'];
@@ -33,7 +34,7 @@ constructor(private activatedRoute: ActivatedRoute, private httpService: HttpSer
       }
     );
 
-
+ 
     // this.productDetails = new ProductDetailsModel();
     // this.productDetails.productImagePath = '/assets/products/product_2.jpg';
     // this.productDetails.productDescription = 'Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set Overall Lace Split Sheer Top & Pants Set ';
@@ -53,4 +54,11 @@ constructor(private activatedRoute: ActivatedRoute, private httpService: HttpSer
     }];
   }
 
+ public  edit(productID){
+    this._router.navigate(['/editproduct/'+productID]);
+  }
+  public addcart(productID){
+      this._router.navigate(['/addcart/'+productID]);
+        
+  }
 }

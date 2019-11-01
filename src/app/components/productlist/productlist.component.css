@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.a1 {
+  display: inline;
+}
+/*# sourceMappingURL=productlist.component.css.map */

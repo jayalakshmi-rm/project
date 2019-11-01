@@ -4,7 +4,7 @@ body {
   height: 100vh;
 }
 
-signup .container #signup-row #signup-column #signup-box {
+#signup .container #signup-row #signup-column #signup-box {
   max-width: 600px;
   height: 600px;
   border: 1px solid #9C9C9C;

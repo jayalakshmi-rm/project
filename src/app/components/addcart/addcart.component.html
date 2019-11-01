@@ -1,0 +1,39 @@
+<!--<div class="content-container" *ngIf="productDetails">
+<div class="row">
+    <div class="col-sm-3">
+        <img [src]="productDetails.productImagePath" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="col-sm-3">
+        {{productDetails.productName}}
+        <select>
+            <option value="qty">Qty</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    
+    <div class="col-sm-3">
+        {{productDetails.productPrice*productDetails.productQuantity}}
+    </div>
+</div>
+</div>-->
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-3">
+            {{productDetails.productName}}
+        </div>
+    
+    <div class="col-md-3">
+         <img [src]="productDetails.productImagePath" class="img-fluid" alt="Responsive image">
+    </div>
+        <div class="col-md-3">
+           {{productDetails.productPrice}}
+        </div>    
+                
+    </div>
+</div>
+   
