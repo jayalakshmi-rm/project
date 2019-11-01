@@ -7,25 +7,25 @@
         <input type="text" [(ngModel)]="product.availableQuality" placeholder="Product Quality" /><br>
         <input type="text" [(ngModel)]="product.productPrice" placeholder="Product Price" required/><br>
         <input type="text" [(ngModel)]="product.productStatus" placeholder="Product Status" required/><br>
-        <!--<input type="text" [(ngModel)]="product.productSizes" placeholder="Product Sizes" required/><br>-->
- <label>Product Size</label>       
-<select multiple [(ngModel)]="product.productSizes"> 
+        <input type="text" [(ngModel)]="product.productSizes" placeholder="Product Sizes" required/><br>
+ <!--<label>Product Size</label>       
+<select  [(ngModel)]="product.productSizes"> 
   <option  selected>select</option>
-    <option value="XS">XS</option>
-    <option value="S">S</option>
-    <option value="M">M</option>
-    <option value="L"> L</option>
-     <option value="XL">XL</option>
-     <option value="XXL">XXL</option>
+    <option value="extra small">XS</option>
+    <option value="small">S</option>
+    <option value="medium">M</option>
+    <option value="large"> L</option>
+     <option value="extra large">XL</option>
+     <option value="double extra large">XXL</option>
      
-</select><br/>
+</select><br/>-->
 
         <input type="text" [(ngModel)]="product.productCategory" placeholder="Product Category" /><br>
-        <input type="button" (click)="addProduct()" value="submit">
-       
+        <input type="button" (click)="submit()" value="submit"><br>
+        
     </div>
 </div>
 <div >
   <input type="button" value="Go back" onclick="history.back()">
 </div>
-
+ <!--<app-add-product [product]="product"></app-add-product>-->

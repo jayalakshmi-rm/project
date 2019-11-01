@@ -9,6 +9,9 @@ import { AuthGuard } from './services/authGuard';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
+import { EditComponent } from './components/edit/edit.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { AddcartComponent } from './components/addcart/addcart.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -18,6 +21,9 @@ const routes: Routes = [
 {path:'productlist',component:ProductlistComponent},
 {path:'productdetails/:productID',component:ProductDetailsComponent},
 {path:'addproductdetails',component:AddProductComponent},
+{path:'editproduct/:productID',component:EditComponent},
+{path:'addcart/:productID',component:AddcartComponent},
+{path:'menu',component:MenuComponent},
 { path: '', redirectTo: 'productlist', pathMatch: 'full' }];
 
 @NgModule({

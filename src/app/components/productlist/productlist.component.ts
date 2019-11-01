@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModel } from 'src/app/model/product';
-import { HttpServiceService } from '../../services/http-service/http-service.service';
+import { HttpServiceService } from '../../services/http-service/http-service.service'; 
+
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
@@ -18,7 +19,7 @@ export class ProductlistComponent implements OnInit {
     this.httpService.getService('product/productlist').subscribe(
       (res) => {
         
-        this.products = res.data;
+        this.products = res['productList'];
       },
       (err) => {
         console.log('error in loading details', err);

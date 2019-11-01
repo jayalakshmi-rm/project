@@ -15,8 +15,12 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductlistComponent } from './components/productlist/productlist.component';
-
-
+import { SearchPipe } from './search.pipe';
+import { EditComponent } from './components/edit/edit.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
+import { AddcartComponent } from './components/addcart/addcart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +31,22 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
     ProductDetailsComponent,
     AddProductComponent,
     ProductlistComponent,
-
+    SearchPipe,
+    EditComponent,
+    MenuComponent,
+    AddcartComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [UserServiceService, RouteServiceService, SharedeventService , AuthService],
   bootstrap: [AppComponent]

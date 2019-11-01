@@ -13,7 +13,7 @@ export class HttpServiceService {
     return this.http.get('http://localhost:3000/' + url);
   }
  
-  public postService(url,data:ProductDetailsModel){
-    return this.http.post('http://localhost:3000/',data);
+  public postService(url,data:any){
+    return this.http.post('http://localhost:3000/'+url,data);
   }
 }

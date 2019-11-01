@@ -5,9 +5,11 @@ export class ProductDetailsModel {
     availableQuality: string;
     productStatus: string; //'Out of stock - OUT_OF_STOCK, Available - AVAILABLE // Mandatory
     productDescription: string; // Mandatory
-    productSizes: Array<string>; // Mandatory
+    productSizes: string[];
+     // Mandatory
     productImagePath: string; // Mandatory
-    prodcutCategory: string;
+    productCategory: string;
+    productQuantity:string;
 }
 
 
