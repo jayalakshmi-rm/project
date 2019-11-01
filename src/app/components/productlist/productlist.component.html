@@ -2,7 +2,7 @@
     <div class="card-group"> 
         <div class="row"> 
           <!--Product1-->
-            <div *ngFor="let p of products" class="card col-md-4"> 
+            <div *ngFor="let p of (products | filterCatergory:selectedCategory)" class="card col-md-4"> 
                 
                     <a [routerLink]="['/productdetails/'+p.productID]"><img class="card-img-top" [src]= 
                     "p.productImagePath"></a>
