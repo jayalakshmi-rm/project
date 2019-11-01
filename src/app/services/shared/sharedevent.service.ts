@@ -1,4 +1,4 @@
-import { Injectable,EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 
 @Injectable({
@@ -6,8 +6,8 @@ import { Injectable,EventEmitter } from '@angular/core';
 })
 export class SharedeventService {
    constructor() { }
-  userData=new EventEmitter<any>();
-  
+  userData = new EventEmitter<any>();
+  categoryEvent: EventEmitter<any> = new EventEmitter();
 }
 
 

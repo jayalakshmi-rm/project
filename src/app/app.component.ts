@@ -11,27 +11,29 @@ import { SearchPipe} from '../app/search.pipe';
 })
 
 export class AppComponent implements OnInit {
-  searchText:string;
-username:string;
+  searchText: string;
+username: string;
  handleLink:boolean=false;
-  constructor(private authService: AuthService,private  sharedEvent:SharedeventService) {
+  constructor(private authService: AuthService,private  sharedEvent: SharedeventService) {
     this.sharedEvent.userData.subscribe(
       (data) => {
         this.handleLink = data;
       }
     );
-  }  
+  }
                     
   isLoggedIn$: Observable<boolean>;
-   
+
     ngOnInit() {
       this.isLoggedIn$ = this.authService.isLoggedIn;
     }
-  
+
     logout(){
-      this.authService.logout();                     
+      this.authService.logout();
+    }
+
+    filterCategory(selectedCategory) {
+      this.sharedEvent.categoryEvent.emit(selectedCategory);
     }
   }
-
-
 

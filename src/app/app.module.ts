@@ -21,6 +21,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
 import { AddcartComponent } from './components/addcart/addcart.component';
+import { CategoryPipe } from './pipes/category.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,7 @@ import { AddcartComponent } from './components/addcart/addcart.component';
     EditComponent,
     MenuComponent,
     AddcartComponent,
-   
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
