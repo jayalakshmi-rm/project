@@ -17,8 +17,9 @@ export class ProductDetailsComponent implements OnInit {
   productSizes = ConstantData.productSizes;
   productList;
   productID;
+  productQuantity;
   noDetailsToDisplay;
-
+  cart=0;
 constructor(private _router:Router,private activatedRoute: ActivatedRoute, private httpService: HttpServiceService) { }
 
   ngOnInit() {   
@@ -57,8 +58,7 @@ constructor(private _router:Router,private activatedRoute: ActivatedRoute, priva
  public  edit(productID){
     this._router.navigate(['/editproduct/'+productID]);
   }
-  public addcart(productID){
-      this._router.navigate(['/addcart/'+productID]);
-        
+  public addcart(){
+   
   }
 }

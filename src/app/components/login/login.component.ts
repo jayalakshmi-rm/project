@@ -35,7 +35,7 @@ addUser(){
       this.authservice.login(this.user);
       this._userService.setUserObj(this.user);
       this.sharedEvent.userData.emit(true);
-     this._router.navigate(["/dashboard"]);
+     this._router.navigate(["/productlist"]);
 
     }else {
       alert("Invalid credentials");
