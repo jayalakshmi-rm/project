@@ -18,12 +18,11 @@ productID;
    // let temp=this.httpservice.getService('product/productlist').;
    console.log(next);
    this.productID = next.params.productID;
-   return this.httpservice.getService('product/productdetails/' + this.productID).pipe(map(
+   return this.httpservice.getService('product/productdetails/' + this.productID)
+   .pipe(map(
       (res) => {
-        if (res && res.product) {
        this.productservice.setProducts(res.product);
        return true;
-      }
       }),
       catchError((er: any, caught: Observable<any>) => of(false)));
   }
