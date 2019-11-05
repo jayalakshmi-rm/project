@@ -24,8 +24,9 @@ export class EditComponent implements OnInit {
    }
 
   ngOnInit() {
+   
     this.productID = this.activatedRoute.snapshot.params['productID'];
-     if(this.productID){
+    if(this.productID){
     this.httpService.getService('product/productdetails/' + this.productID).subscribe(
       (res) => {
         this.product = res['product'];
@@ -36,7 +37,11 @@ export class EditComponent implements OnInit {
       }
     );
      }
-  }
+     else{
+      
+    }
+    }
+    
  submit(){
     let temp={
       productName: this.product.productName,
@@ -50,12 +55,12 @@ export class EditComponent implements OnInit {
     prodcutCategory: this.product.productCategory
     }
   
-    this.productID = this.activatedRoute.snapshot.params['productID'];
-
-    this.httpService.postService('product/editproduct/' + this.productID,temp).subscribe(
+    //this.productID = this.activatedRoute.snapshot.params['productID'];
+    let url = (this.productID) ? ('product/editproduct' + this.productID) : 'product/addproduct';
+    this.httpService.postService( url,temp).subscribe(
       (res) => {
         //this.productDetails=productDetails;
-       this.productDetails = res['product'];
+       //this.productDetails = res['product'];
         console.log(res);
         this._router.navigate(['/productlist']);
       },
@@ -64,7 +69,8 @@ export class EditComponent implements OnInit {
         this.noDetailsToDisplay = 'Error in loading details' + err['error'];
       }
     );
-
+  
+  
 
 
   }

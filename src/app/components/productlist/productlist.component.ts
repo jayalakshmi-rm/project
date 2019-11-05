@@ -25,7 +25,7 @@ export class ProductlistComponent implements OnInit {
     this.httpService.getService('product/productlist').subscribe(
       (res) => {
 
-        this.products = res.productList;
+        this.products = res["productList"];
       },
       (err) => {
         console.log('error in loading details', err);

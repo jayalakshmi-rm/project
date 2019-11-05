@@ -58,13 +58,16 @@
         <li class="nav-item">
           <div class="nav-link disabled text-border px-1">|</div>
         </li>
-      <li class="nav-item"><a class="nav-link" routerLink="/login"><i class="czi-eye align-middle mt-n1 mr-2"></i>Login</a></li>
-      <li class="nav-item">
-        <div class="nav-link disabled text-border px-1">|</div>
+      <li class="nav-item"  *ngIf="!(isLoggedIn$ |async) as isLoggedIn"><a class="nav-link" *ngIf="isLoggedIn" routerLink="/login"><i class="czi-eye align-middle mt-n1 mr-2"></i>Login</a></li>
+      <li class="nav-item" *ngIf="isLoggedIn$ |async as isLoggedIn">
+        <a class="nav-link" class="btn btn-primary" (click)="logout()" *ngIf="isLoggedIn ">Logout</a>
       </li>
-      <li class="nav-item"><a class="nav-link" routerLink="/signup"><i class="czi-book align-middle mt-n1 mr-2"></i>signup</a></li>
       <li class="nav-item">
-        <div class="nav-link disabled text-border px-1">|</div>
+        <div class="nav-link disabled text-border px-1" *ngIf="!handleLink">|</div>
+      </li>
+      <li class="nav-item"  *ngIf="!handleLink"><a class="nav-link" routerLink="/signup"><i class="czi-book align-middle mt-n1 mr-2"></i>signup</a></li>
+      <li class="nav-item">
+        <div class="nav-link disabled text-border px-1"  *ngIf="!handleLink">|</div>
       </li>
       <li class="nav-item"><a class="nav-link" routerLink="/productlist"><i class="czi-book align-middle mt-n1 mr-2"></i></a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/addproductdetails"><i class="czi-book align-middle mt-n1 mr-2"></i></a></li>

@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
+import {User} from '../../model/user';
+import { ProductDetailsModel } from 'src/app/model/product-details.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
+export class ProductService{ 
+productDetails:ProductDetailsModel;
 
-  constructor(private http:HttpClient) { }
-  getProducts(){
-     return this.http.get('http://localhost:3000/products');
+  constructor() {
+    this.productDetails=new ProductDetailsModel(); 
+   }
+   getProducts():ProductDetailsModel{
+    return this.productDetails;
   }
+ setProducts(productDetails) {
+   console.log('set',productDetails);
+    this.productDetails = productDetails;
+}
+ 
 }

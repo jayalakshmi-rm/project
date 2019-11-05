@@ -21,8 +21,8 @@
 </select><br/>-->
 
         <input type="text" [(ngModel)]="product.productCategory" placeholder="Product Category" /><br>
-        <input type="button" (click)="submit()" value="submit"><br>
-        
+        <input type="button" *ngIf="!productID" (click)="submit()" value="add"><br>
+        <input type="button" *ngIf="productID"(click)="submit()" value="edit"><br>
     </div>
 </div>
 <div >
